@@ -68,3 +68,13 @@ def test_get_nth_fibonacci_ten():
 
  # Assert
  assert result == 89
+
+def test_area_of_circle_negative_radius():
+    """Test area of circle with negative radius."""
+    radius = -1
+
+    try:
+        area_of_circle(radius)
+        assert False
+    except ValueError:
+        assert True
